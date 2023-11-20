@@ -1,31 +1,35 @@
-/* MenuForm.css */
 input{
-    margin-right: 20px;
-  }
-  .menu-form {
-    margin-top: 20px;
-  }
-  
-  .menu-form label {
-    display: block;
-    margin-bottom: 15px; /* Ajusta según sea necesario para agregar espacio */
-    color: #333;
-  }
-  
-  .menu-form input {
-    width: 100%;
-    padding: 8px;
-    margin: 10px;
-  }
-  
-  .menu-form button {
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .menu-form button:hover {
-    background-color: #45a049;
-  }
+  margin-right: 20px;
+  border-radius: 10px;
+  color: black;
+  width: 50%;
+}
+.menu-form {
+  margin-top: 20px;
+}
+
+.menu-form label {
+  display: block;
+  margin-bottom: 15px; /* Ajusta según sea necesario para agregar espacio */
+  color: #333;
+}
+
+.menu-form input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px;
+}
+
+.menu-form button {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 7px;
+
+}
+
+.menu-form button:hover {
+  background-color: #45a049;
+}

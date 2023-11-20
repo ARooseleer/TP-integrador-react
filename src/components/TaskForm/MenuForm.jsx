@@ -17,6 +17,7 @@ const MenuForm = ({ onAddTask }) => {
   return (
     <div>
       <label htmlFor="task">Ingresar nueva tarea:  </label>
+      <br />
       <input
         type="text"
         id="task"
