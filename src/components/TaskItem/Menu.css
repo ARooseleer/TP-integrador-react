@@ -1,0 +1,30 @@
+/* Menu.css */
+
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-item p {
+    margin-right: 10px;
+  }
+  
+  .menu-item button {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .menu-item button:hover {
+    background-color: #151515;
+  }
+  
+  .completed-task {
+    text-decoration: line-through;
+  }

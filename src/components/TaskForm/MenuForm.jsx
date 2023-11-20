@@ -16,13 +16,13 @@ const MenuForm = ({ onAddTask }) => {
 
   return (
     <div>
-      <label htmlFor="task">Nueva Tarea:</label>
+      <label htmlFor="task">Ingresar nueva tarea:  </label>
       <input
         type="text"
         id="task"
         value={task}
         onChange={handleInputChange}
-      />
+      /> 
       <button onClick={handleAddTask}>Agregar Tarea</button>
     </div>
   );
