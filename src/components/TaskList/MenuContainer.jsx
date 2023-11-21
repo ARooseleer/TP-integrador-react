@@ -27,6 +27,15 @@ const MenuContainer = () => {
     setEditIndex(null);
   };
 
+  const handleToggleStatus = (index) => {
+    setOptions((prevOptions) => {
+      const newOptions = [...prevOptions];
+      newOptions[index] = { ...newOptions[index], completa: !newOptions[index].completa };
+      saveOptionsToLocalStorage(newOptions);
+      return newOptions;
+    });
+  };
+
   const handleClickButton = (index, e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -63,9 +72,13 @@ const MenuContainer = () => {
             <Menu
               name={option.name}
               index={index}
-              onTaskComplete={handleEditOption}
+              
               completa={option.completa}
+              
             />
+            <button onClick={() => handleToggleStatus(index)}>
+              Marcar como {option.completa ? 'Incompleto' : 'Completo'}
+            </button>
             <button onClick={(e) => handleClickButton(index, e)}>Eliminar</button>
           </li>
         ))}

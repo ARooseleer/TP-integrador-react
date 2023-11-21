@@ -10,7 +10,7 @@ input{
 
 .menu-form label {
   display: block;
-  margin-bottom: 15px; /* Ajusta según sea necesario para agregar espacio */
+  margin-bottom: 15px; 
   color: #333;
 }
 
@@ -26,10 +26,5 @@ input{
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
-  border-radius: 7px;
+  }
 
-}
-
-.menu-form button:hover {
-  background-color: #45a049;
-}
