@@ -75,17 +75,21 @@ const MenuContainer = () => {
       <ul id="columas" className='col3'>
         {options.map((option, index) => (
           <li key={index} className='section4 row'>
-            <Menu
-              name={option.name}
-              index={index}
-              completa={option.completa}
-              className='col-md-4'
-              
-            />
-            
-            <button onClick={() => handleToggleStatus(index)}> {option.completa ? 'Incompleto' : ''}
-              <FontAwesomeIcon icon={faCheck} style={{ color: '#ffffff' }} className='col-md-4'/></button>
-            <button onClick={(e) => handleClickButton(index, e)}><FontAwesomeIcon icon={faTrash} style={{color: "#ffffff",}} className="col-md-4"/></button>
+            <div className='col-md-8'>
+              <Menu
+                name={option.name}
+                index={index}
+                completa={option.completa}
+              />
+            </div>
+            <div className='col-md-4'>
+              <button onClick={() => handleToggleStatus(index)}> {option.completa ? 'Incompleto' : ''}
+                <FontAwesomeIcon icon={faCheck} style={{ color: '#ffffff' }} />
+              </button>
+              <button onClick={(e) => handleClickButton(index, e)}>
+                <FontAwesomeIcon icon={faTrash} style={{color: "#ffffff",}}/>
+              </button>
+            </div>
 
           </li>
         ))}
