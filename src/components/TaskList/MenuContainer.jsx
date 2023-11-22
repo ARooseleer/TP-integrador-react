@@ -68,23 +68,25 @@ const MenuContainer = () => {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Gestión de tareas</h1>
       <MenuForm onAddTask={handleAddTask} />
       <h2 className='section3'>Tareas:</h2>
-      <ul className="col3" id="columas">
+      <ul id="columas" className='col3'>
         {options.map((option, index) => (
-          <li key={index} className='section4'>
+          <li key={index} className='section4 row'>
             <Menu
               name={option.name}
               index={index}
-              
               completa={option.completa}
+              className='col-md-4'
               
             />
+            
             <button onClick={() => handleToggleStatus(index)}> {option.completa ? 'Incompleto' : ''}
-              <FontAwesomeIcon icon={faCheck} style={{ color: '#ffffff' }} /></button>
-            <button onClick={(e) => handleClickButton(index, e)}><FontAwesomeIcon icon={faTrash} style={{color: "#ffffff",}} /></button>
+              <FontAwesomeIcon icon={faCheck} style={{ color: '#ffffff' }} className='col-md-4'/></button>
+            <button onClick={(e) => handleClickButton(index, e)}><FontAwesomeIcon icon={faTrash} style={{color: "#ffffff",}} className="col-md-4"/></button>
+
           </li>
         ))}
       </ul>
