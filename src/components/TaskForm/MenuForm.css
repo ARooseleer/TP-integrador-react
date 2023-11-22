@@ -1,8 +1,15 @@
+.section2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 input{
   margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   color: black;
-  width: 50%;
+  width: 400px;
+  height: 30px;
 }
 .menu-form {
   margin-top: 20px;
@@ -20,11 +27,8 @@ input{
   margin: 10px;
 }
 
-.menu-form button {
-  background-color: #4caf50;
-  color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-  }
+.btn-add {
+width: 150px;
+height: 40px;
 
+ }

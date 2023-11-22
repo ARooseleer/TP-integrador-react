@@ -15,12 +15,14 @@ body {
 
 h1 {
   color: #333;
+  
 }
 
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 
 li {
   background-color: #fff;
@@ -37,6 +39,9 @@ button {
   border: none;
   padding: 8px;
   cursor: pointer;
+  border-radius: 7px;
+  width: 40px;
+  height: 40px;
 }
 
 button:hover {

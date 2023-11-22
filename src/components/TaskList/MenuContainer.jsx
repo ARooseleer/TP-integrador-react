@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Menu from '../TaskItem/Menu';
 import MenuForm from '../TaskForm/MenuForm';
 import './MenuContainer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+
+
 
 const MenuContainer = () => {
   const [options, setOptions] = useState([]);
@@ -63,12 +69,12 @@ const MenuContainer = () => {
 
   return (
     <div>
-      <h1>Ingrese sus tareas</h1>
+      <h1>Gestión de tareas</h1>
       <MenuForm onAddTask={handleAddTask} />
-      <h1>Tareas:</h1>
+      <h2 className='section3'>Tareas:</h2>
       <ul className="col3" id="columas">
         {options.map((option, index) => (
-          <li key={index}>
+          <li key={index} className='section4'>
             <Menu
               name={option.name}
               index={index}
@@ -76,10 +82,9 @@ const MenuContainer = () => {
               completa={option.completa}
               
             />
-            <button onClick={() => handleToggleStatus(index)}>
-              Marcar como {option.completa ? 'Incompleto' : 'Completo'}
-            </button>
-            <button onClick={(e) => handleClickButton(index, e)}>Eliminar</button>
+            <button onClick={() => handleToggleStatus(index)}> {option.completa ? 'Incompleto' : ''}
+              <FontAwesomeIcon icon={faCheck} style={{ color: '#ffffff' }} /></button>
+            <button onClick={(e) => handleClickButton(index, e)}><FontAwesomeIcon icon={faTrash} style={{color: "#ffffff",}} /></button>
           </li>
         ))}
       </ul>

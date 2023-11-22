@@ -15,8 +15,8 @@ const MenuForm = ({ onAddTask }) => {
   };
 
   return (
-    <div>
-      <label htmlFor="task">Ingresar nueva tarea:  </label>
+    <div className='section2'>
+      <label htmlFor="task">Ingrese su tarea:  </label>
       <br />
       <input
         type="text"
@@ -24,7 +24,7 @@ const MenuForm = ({ onAddTask }) => {
         value={task}
         onChange={handleInputChange}
       /> 
-      <button onClick={handleAddTask}>Agregar Tarea</button>
+      <button onClick={handleAddTask} className='btn-add'>Agregar Tarea</button>
     </div>
   );
 };
