@@ -1,11 +1,11 @@
 import './App.css'
-import MenuContainer from './components/TaskList/MenuContainer'
+import TaskList from './components/TaskList/TaskList'
 
 function App() {
 
   return (
     <>
-      <MenuContainer/>
+      <TaskList/>
     </>
   )
 }

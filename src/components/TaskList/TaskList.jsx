@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Menu from '../TaskItem/Menu';
-import MenuForm from '../TaskForm/MenuForm';
-import './MenuContainer.css';
+import TaskItem from '../TaskItem/TaskItem';
+import TaskForm from '../TaskForm/TaskForm';
+import './TaskList.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +9,9 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const MenuContainer = () => {
+const TaskList = () => {
   const [options, setOptions] = useState([]);
-  const [editIndex, setEditIndex] = useState(null);
-
+  
   // Cargar tareas desde localStorage al montar el componente
   useEffect(() => {
     const storedOptions = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -23,16 +22,7 @@ const MenuContainer = () => {
     localStorage.setItem('tasks', JSON.stringify(newOptions));
   };
 
-  const handleEditOption = (index, updatedOption) => {
-    setOptions((prevOptions) => {
-      const newOptions = [...prevOptions];
-      newOptions[index] = { ...newOptions[index], ...updatedOption };
-      saveOptionsToLocalStorage(newOptions);
-      return newOptions;
-    });
-    setEditIndex(null);
-  };
-
+  
   const handleToggleStatus = (index) => {
     setOptions((prevOptions) => {
       const newOptions = [...prevOptions];
@@ -70,13 +60,13 @@ const MenuContainer = () => {
   return (
     <div className='container'>
       <h1>Gestión de tareas</h1>
-      <MenuForm onAddTask={handleAddTask} />
+      <TaskForm onAddTask={handleAddTask} />
       <h2 className='section3'>Tareas:</h2>
       <ul id="columas" className='col3'>
         {options.map((option, index) => (
           <li key={index} className='section4 row'>
             <div className='col-md-8'>
-              <Menu
+              <TaskItem
                 name={option.name}
                 index={index}
                 completa={option.completa}
@@ -98,4 +88,4 @@ const MenuContainer = () => {
   );
 };
 
-export default MenuContainer;
+export default TaskList;

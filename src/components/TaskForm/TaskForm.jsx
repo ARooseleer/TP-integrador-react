@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './MenuForm.css'
-const MenuForm = ({ onAddTask }) => {
+import './TaskForm.css'
+const TaskForm = ({ onAddTask }) => {
   const [task, setTask] = useState('');
 
   const handleInputChange = (event) => {
@@ -29,4 +29,4 @@ const MenuForm = ({ onAddTask }) => {
   );
 };
 
-export default MenuForm;
+export default TaskForm;

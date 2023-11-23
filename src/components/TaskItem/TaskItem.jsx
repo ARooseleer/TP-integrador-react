@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Menu.css';
+import './TaskItem.css';
 
-const Menu = ({ name, completa }) => {
+const TaskItem = ({ name, completa }) => {
   const [status, setStatus] = useState(completa ? 'completo' : 'incompleto');
 
   useEffect(() => {
@@ -19,4 +19,4 @@ const Menu = ({ name, completa }) => {
   );
 };
 
-export default Menu;
+export default TaskItem;
